@@ -51,7 +51,7 @@ EOF
 
 fi
 
-
+# rationale: mostrar al usuario lo que se puede hacer
 cat << 'EOF'
 less /var/log/ipaserver-install.log
 kinit admin
