@@ -12,10 +12,10 @@ then
 
   # rationale: configurar con DNS EXTERNO
   ipa-server-install << 'EOF'
-no
-freeipa.portal.glud.org
-portal.glud.org
-PORTAL.GLUD.ORG
+
+
+
+
 mipasswordprueba
 mipasswordprueba
 adminpasswordprueba
