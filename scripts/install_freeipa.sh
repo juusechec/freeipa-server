@@ -1,4 +1,5 @@
 #!/bin/bash
+echo 'Ejecutando: install_freeipa.sh'
 
 # rationale: valida que el usuario que ejecute el script sea root
 if [ $USER != 'root' ]; then
@@ -182,4 +183,9 @@ echo 'Después de reiniciar ejecute el archivo config_freeipa.sh'
 
 # rationale: reiniciar para recargar los cambios
 # todo: revisar si en serio se necesita para ejecutar config_freeipa.sh
-systemctl reboot
+if [ -f /usr/sbin/ipa-server-install ]
+then
+  echo 'No necesita reiniciar. FREEIPA esta instalado.'
+else
+  systemctl reboot
+fi

@@ -2,6 +2,11 @@
 
 En este repositorio se ponen los pasos de despliegue de un servidor proveedor de identidad.
 
+# Instrucciones de USO
+No fue posible para mi poner la configuración y la instalación en un solo paso,
+ya que la instalación necesita que se configure y ***reinicie*** el servidor.
+Hay que hacer vagrant provision 2 veces, una de esas después del reboot.
+
 # Redimensionar disco vmdk virtualbox
 ## Convertir vmdk a vdi
 http://stackoverflow.com/questions/11659005/how-to-resize-a-virtualbox-vmdk-file

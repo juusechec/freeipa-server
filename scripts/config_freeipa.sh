@@ -1,13 +1,11 @@
 #!/bin/bash
+echo 'Ejecutando: config_freeipa.sh'
 
 # rationale: valida que el usuario que ejecute el script sea root
 if [ $USER != 'root' ]; then
   echo 'El script debe ser ejecutado como ROOT'
   exit
 fi
-
-# rationale: dependencias freeipa sin DNS EXTERNO
-yum install -y ipa-server-dns
 
 if [ "$EXTERNAL_DNS" = "true" ]
 then
@@ -26,20 +24,28 @@ yes
 EOF
 
 else
+
+  # rationale: dependencias freeipa sin DNS EXTERNO
+  yum install -y ipa-server-dns
+
   # rationale: configurar sin DNS EXTERNO
   ipa-server-install << 'EOF'
 yes
-freeipa.portal.glud.org
-portal.glud.org
-PORTAL.GLUD.ORG
+
+
+
 mipasswordprueba
 mipasswordprueba
 adminpasswordprueba
 adminpasswordprueba
-yes
-yes
-yes
-yes
+192.168.100.200
+
+
+
+
+
+
+
 yes
 EOF
 

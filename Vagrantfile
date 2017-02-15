@@ -76,5 +76,5 @@ Vagrant.configure("2") do |config|
 
   scripts_path="scripts/"
   config.vm.provision "shell", path: scripts_path+"install_freeipa.sh", env: {"EXTERNAL_DNS" => "false"}
-  config.vm.provision "shell", path: scripts_path+"config_freeipa.sh", env: {"EXTERNAL_DNS" => "false"}
+  #config.vm.provision "shell", path: scripts_path+"config_freeipa.sh", env: {"EXTERNAL_DNS" => "false"}
 end
