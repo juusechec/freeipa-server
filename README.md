@@ -7,6 +7,25 @@ No fue posible para mi poner la configuración y la instalación en un solo paso
 ya que la instalación necesita que se configure y ***reinicie*** el servidor.
 Hay que hacer vagrant provision 2 veces, una de esas después del reboot.
 
+1) Inicie la máquina:
+```bash
+vagrant up
+```
+
+2) Provisione la máquina:
+```bash
+vagrant provision
+vagrant provision
+```
+
+3) Si no agregó un DNS configure su ***/etc/hosts*** o
+***C:\Windows\System32\drivers\etc*** y agregue la entrada:
+```bash
+192.168.100.200		freeipa.portal.glud.org
+```
+
+4) Acceda a la URL https://freeipa.portal.glud.org/ipa/ui/ desde un navegador web.
+
 # Redimensionar disco vmdk virtualbox
 ## Convertir vmdk a vdi
 http://stackoverflow.com/questions/11659005/how-to-resize-a-virtualbox-vmdk-file
