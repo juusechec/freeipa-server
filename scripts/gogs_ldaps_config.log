@@ -1,0 +1,17 @@
+Authentication Setting
+Authentication Type: LDAP (simple auth)
+Authentication Name: freeipa (simple)
+Security Protocol: LDAPS
+Host: freeipa.portal.incige.com
+Port: 636 # for secure reasons
+User DN: uid=%s,cn=users,cn=accounts,dc=portal,dc=incige,dc=com
+User Filter: (&(objectClass=person)(uid=%s)) # basic
+User Filter: (&(objectClass=Person)(|(uid=%[1]s)(mail=%[1]s)(mobile=%[1]s))) # for email and mobile too
+User Filter: (&(objectClass=person)(uid=%s)(memberOf=cn=gogsusers,cn=groups,cn=accounts,dc=portal,dc=incige,dc=com)) # advanced
+Admin Filter: (memberOf=cn=gogsadmins,cn=groups,cn=accounts,dc=portal,dc=incige,dc=com) #advanced
+Username attribute:
+First name attribute:
+Surname attribute:
+Email attribute: mail
+Skip TLS Verify: (true)
+This authentication is activated: (true)
