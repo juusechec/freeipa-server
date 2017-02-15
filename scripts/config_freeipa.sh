@@ -60,7 +60,7 @@ ipa config-mod --defaultshell=/bin/bash
 ipa user-add juusechec --first=Jorge --last=Useche --password
 # ingresar por la URL https://freeipa.portal.glud.org/
 #xdg-open https://freeipa.portal.glud.org
-ldapwhoami -vvv -h freeipa.portal.incige.org -p 389 -D "uid=juusechec,cn=users,cn=accounts,dc=portal,dc=glud,dc=org" -x -w password
+ldapwhoami -vvv -h freeipa.portal.glud.org -p 389 -D "uid=juusechec,cn=users,cn=accounts,dc=portal,dc=glud,dc=org" -x -w password
 ldapsearch -x uid=admin # en el freeipa http://www.freeipa.org/page/HowTo/LDAP
-ldapsearch -x -h freeipa.portal.incige.org  -b dc=portal,dc=glud,dc=org uid=admin # en otro lado
+ldapsearch -x -h freeipa.portal.glud.org  -b dc=portal,dc=glud,dc=org uid=admin # en otro lado
 EOF
