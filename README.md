@@ -25,6 +25,10 @@ vagrant provision
 ```
 
 4) Acceda a la URL https://freeipa.portal.glud.org/ipa/ui/ desde un navegador web.
+```
+Usuario: admin
+Clave: adminpasswordprueba
+```
 
 # Redimensionar disco vmdk virtualbox
 ## Convertir vmdk a vdi
